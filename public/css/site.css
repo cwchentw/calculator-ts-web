@@ -1,0 +1,24 @@
+.div-calc {
+    width: 98%;
+    margin: 0 5px 5px 5px;
+}
+
+.text-calc {
+    text-align: right;
+    background: beige !important;
+}
+
+.btn-calc {
+    width: 90%;
+    margin: 0 5px 5px 5px;
+}
+
+.btn-calc-lg {
+    width: 94%;
+    margin: 0 0 5px 5px;
+}
+
+.nopadding {
+   padding: 0;
+   margin: 0;
+}
