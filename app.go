@@ -27,7 +27,7 @@ func main() {
 
 	// Set the parameters for a HTTP server
 	server := http.Server{
-		Addr:    "0.0.0.0:8080",
+		Addr:    "127.0.0.1:8080",
 		Handler: mux,
 	}
 
