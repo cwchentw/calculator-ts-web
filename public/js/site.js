@@ -270,23 +270,19 @@ jQuery('#clear').click(function() {
     jQuery('#calc-text').prop('disabled', true);
 });
 
-define("main", ["interpreter"], function(e) {
-    jQuery('#calc').click(function() {
-        jQuery('#calc-text').prop('disabled', false);
-        let text = jQuery('#calc-text').val();
+jQuery('#calc').click(function() {
+    jQuery('#calc-text').prop('disabled', false);
+    let text = jQuery('#calc-text').val();
 
-        try {
-            var evaluator = new e.Evaluator(text);
-            let result = evaluator.run();
-            jQuery('#calc-text').val(result);
-        }
-        catch (err) {
-            jQuery('#msg').empty();
-            jQuery('#msg').append("<div class=\"alert alert-warning alert-dismissable center-block\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a><strong>Error</strong> " + err + " </div>");
-        }
+    try {
+        var evaluator = new calc.Evaluator(text);
+        let result = evaluator.run();
+        jQuery('#calc-text').val(result);
+    }
+    catch (err) {
+        jQuery('#msg').empty();
+        jQuery('#msg').append("<div class=\"alert alert-warning alert-dismissable center-block\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a><strong>Error</strong> " + err + " </div>");
+    }
 
-        jQuery('#calc-text').prop('disabled', true);
-    });
-
+    jQuery('#calc-text').prop('disabled', true);
 });
-require(["main"], function(m) {}, function(err) {});
