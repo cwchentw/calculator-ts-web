@@ -1,10 +1,10 @@
-# calculator-ts-web
+# tscalc-web
 
 A simple web calculator.
 
 ## Intro
 
-This web calculator uses [calculator-ts](https://github.com/cwchentw/calculator-ts), an elementary arithmetic interpreter, for calculation.
+This web calculator utilizes [tscalc](https://github.com/cwchentw/tscalc), an elementary arithmetic interpreter, for calculation.
 
 ## Copyright
 
