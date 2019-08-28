@@ -50,6 +50,7 @@ func notFound(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), 500)
 	}
 
+	w.WriteHeader(http.StatusNotFound) // HTTP 404
 	t.ExecuteTemplate(w, "layout", "Calculator")
 }
 
@@ -59,5 +60,6 @@ func errorHandler(w http.ResponseWriter, r *http.Request, p interface{}) {
 		http.Error(w, err.Error(), 500)
 	}
 
+	w.WriteHeader(http.StatusInternalServerError) // HTTP 500
 	t.ExecuteTemplate(w, "layout", "Calculator")
 }
